@@ -1,0 +1,26 @@
+----------------------------------------------------------
+|            MadLibs-CS-452 Application Structure        |
+----------------------------------------------------------
+| Java Application (Main)                                |
+|--------------------------------------------------------|
+| + uses Gson                                            |
+| + interacts with MySQL through JDBC                    |
+----------------------------------------------------------
+         ^            ^                     ^
+         |            |                     |
+     uses Gson    uses JDBC            uses MySQL
+         |            |                     |
+ -------           (mysql_connector_java)   |
+| com.google.gson.Gson  ------------------- |
+| +toJson()             | interacts via     |
+| +fromJson()           | JDBC              |
+ ----------------        ----------------------
+                                           |
+                ------------------------------- 
+                |         MySQL Database        |
+                | (Scalable: Replication, etc.) |
+                -------------------------------
+
+Other components:
+* IntelliJ IDEA (Development only, not runtime; not in diagram)
+* Maven (Dependency management/build, not runtime; not in diagram)

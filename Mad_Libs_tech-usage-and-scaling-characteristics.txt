@@ -1,0 +1,14 @@
+IntelliJ IDEA: IDE, mainly for development; not present in code structure directly.
+Java: Main programming language—core classes.
+Gson (com.google.gson.Gson): Used for JSON serialization/deserialization.
+MySQL: RDBMS for persistent storage.
+JDBC for MySQL (likely via mysql_connector_java): Allows Java to communicate with the MySQL DB.
+Maven: Project management and build tool (dependency management).
+Scaling capabilities:
+
+IntelliJ: Not a runtime component, so not scalable in deployment.
+Java: Highly scalable (multi-threading, sockets, etc.).
+Gson: Scales with memory as it deals with JSON in-memory.
+MySQL: Scalable via replication, sharding, clustering.
+JDBC: Scales with connection pooling (like via HikariCP).
+Maven: Build-only, not a runtime dependency.
