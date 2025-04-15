@@ -97,7 +97,6 @@ public class AdminOnly {
                 String createPrompt = "Give the story a name: ";
                 System.out.printf(createPrompt);
                 String storyName = scanner.nextLine();
-    //                String storyName = input5;
                 while (storyName.isBlank()) {
                     storyName = getInputAgainBecauseInvalid(scanner, createPrompt);
                 }
@@ -108,7 +107,6 @@ public class AdminOnly {
                     stringBuilder.append(storyID);
 
                     checkIfStorySuccessfullyCreated(stringBuilder.toString());
-//                    Integer.toString(storyID)
                 } catch (DataAccessException ex) {
                     System.out.println("Error: Unable to create Story");
                     break;
